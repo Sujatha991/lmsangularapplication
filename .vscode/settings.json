@@ -1,0 +1,4 @@
+{
+    "appService.deploySubpath": ".",
+    "appService.defaultWebAppToDeploy": "/subscriptions/bdd5e418-b08f-4817-9728-7155b64834bc/resourceGroups/rg-azuser706_mml.local-sNjhc/providers/Microsoft.Web/sites/lmsangularapp"
+}

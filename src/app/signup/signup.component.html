@@ -1,0 +1,47 @@
+<!-- <div class="toolbar" role="banner">
+   <img width="10">
+<span><h1>LMS Application</h1></span>
+<div class="spacer"></div>
+<a aria-label="Angular on Youtube" target="_blank" rel="noopener" title="Logout">
+  <label style="margin-right: 35px;">Home</label>
+</a>
+<a aria-label="Angular on Youtube" target="_blank" rel="noopener" title="Logout">
+ <label style="margin-right: 35px;">About</label>
+</a>
+</div> -->
+<!-- <div class="wrapper">
+   <div class="block"> -->
+      <!-- <div class="container containerdiv"> -->
+         <div class="row">         
+            <div class="col-sm-6" >
+            <img  src="https://images.unsplash.com/photo-1566888596782-c7f41cc184c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80" width="600" height="500"/>       
+            </div>
+          <div class="col-sm-6 right" style="padding:20px">
+     <form [formGroup]="signupForm">
+        <h6 class="">{{hedValue}}</h6>
+        <input type="text" formControlName="username" placeholder="User Name" [ngClass]="signupForm.controls['username'].invalid&&submitted?'errors':'inp'" />
+        <label class="error text-danger"  style="color: red;margin-left: 9px;" *ngIf="submitted && f.username.errors" >User name is required</label>
+        <input type="password" formControlName="password" placeholder="Password" [ngClass]="signupForm.controls['password'].invalid&&submitted?'errors':'inp'" />
+        <label class="error text-danger" style="color: red;margin-left: 9px;" *ngIf="submitted && f.password.errors" >Password is required</label>
+        <!-- <input type="text" formControlName="role" placeholder="Role" [ngClass]="signupForm.controls['role'].invalid&&submitted?'errors':'inp'" /> -->
+         <select style="width: 83%;
+         padding: 10px 15px;
+         margin: 10px;" formControlName="role" [ngClass]="signupForm.controls['role'].invalid&&submitted?'errors':'inp'">
+            <option value="" selected>Select Role</option>
+            <option value="student">Student</option>
+            <option value="instructor">Instructor</option>
+            </select>
+            <label class="error text-danger" style="color: red;margin-left: 9px;" *ngIf="submitted && f.role.errors" >Role is required</label>
+        <div style="text-align: right;
+        padding-right: 85px;">
+           <button type="button" class="btn btn-primary" style="margin-right: 6px;" type="submit" (click)="Signup()">Sign Up</button>
+           <!-- <button class="btnsub" type="submit" [routerLink]="['/Login']">Login</button> -->
+           <button type="button" class="btn btn-primary" type="submit" (click)="clear()">Clear</button>
+        </div>
+        <br>
+        <label style="margin-left: 13px;">Existing User <a [routerLink]="['/Login']">Login</a></label>
+     </form>
+   </div>
+   <!-- </div>
+   
+</div> -->

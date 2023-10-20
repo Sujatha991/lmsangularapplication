@@ -1,0 +1,24 @@
+<app-courseheader></app-courseheader>
+<br>
+<div class="wrapper">
+   <div class="block">
+     <form [formGroup]="creatCourseForm">
+        <h2 class="">{{hedValue}}</h2>
+        <input type="text" formControlName="coursename" placeholder="Course Name" [ngClass]="creatCourseForm.controls['coursename'].invalid&&submitted?'errors':'inp'" />
+        <label class="error text-danger"  style="color: red;margin-left: 9px;" *ngIf="submitted && f.coursename.errors" >Course name is required</label>
+        <input type="text" formControlName="tag" placeholder="Tag" [ngClass]="creatCourseForm.controls['tag'].invalid&&submitted?'errors':'inp'" />
+        <label class="error text-danger"  style="color: red;margin-left: 9px;" *ngIf="submitted && f.tag.errors" >Tag is required</label>
+        <input type="text" formControlName="category" placeholder="Category" [ngClass]="creatCourseForm.controls['category'].invalid&&submitted?'errors':'inp'" />
+        <label class="error text-danger"  style="color: red;margin-left: 9px;" *ngIf="submitted && f.category.errors" >Category is required</label>
+        <input type="text" formControlName="subcategory" placeholder="Sub Category" [ngClass]="creatCourseForm.controls['subcategory'].invalid&&submitted?'errors':'inp'" />
+        <label class="error text-danger"  style="color: red;margin-left: 9px;" *ngIf="submitted && f.subcategory.errors" >Subcategory is required</label>
+        <div class="btns">
+           <button type="button" class="btn btn-primary"  (click)="AddCourse(creatCourseForm)" [hidden]="toAdddisplay">Add Course</button>
+           <button type="button" class="btn btn-primary" style="margin-right: 10px;" (click)="UpdateCourse(creatCourseForm)" [hidden]="toUpdatedisplay">Update Course</button>
+           <button type="button" class="btn btn-primary" style="margin-right: 321px;" (click)="clear()">Clear</button>
+        </div>
+          <br>
+          <a [routerLink]="['/CourseDashboard']">Course Dashbaord</a>
+     </form>
+   </div>
+</div>

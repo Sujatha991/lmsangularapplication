@@ -1,0 +1,120 @@
+/* .containerdiv{
+    padding-left: 600px;
+} */
+.block{
+    justify-content: center;
+    align-items: center;
+}
+
+.frm{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+}
+
+.inp{
+    width: 83%;
+    padding: 10px 15px;
+    margin: 10px;
+    font-family: inherit;
+}
+
+.btns{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.errors{
+    border: 2px solid red;
+    width: 83%;
+    padding: 10px 15px;
+    margin: 10px;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.btnsub{
+    padding: 15px 10px;
+    background-color: #57bde7;
+    margin-right: 5px;
+    color: white;
+    font-weight: 600;
+    border: none;
+    width: 100px;
+}
+
+.btnsub:disabled{
+    background-color: grey;
+    color: white;
+}
+.spacer {
+    flex: 1;
+  }
+.btnclear{
+    padding: 15px 10px;
+    background-color: #57bde7;
+    margin-right: 5px;
+    color: white;
+    font-weight: 600;
+    border: none;
+    width: 100px;
+}
+
+.btnclear:disabled{
+    background-color: grey;
+    color: white;
+}
+
+.hed{
+    margin: 0px 123px 16px;
+}
+
+.block{
+    width: 380px;
+    background: linear-gradient(400deg,white,grey);
+    height: 350px;
+    display: flex;
+}
+.toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: gray;
+    color: white;
+    font-weight: 600;
+  }
+
+  .toolbar img {
+    margin: 0 16px;
+  }
+
+  .toolbar #twitter-logo {
+    height: 40px;
+    margin: 0 8px;
+  }
+
+  .toolbar #youtube-logo {
+    height: 40px;
+    margin: 0 16px;
+  }
+
+  .toolbar #twitter-logo:hover,
+  .toolbar #youtube-logo:hover {
+    opacity: 0.8;
+  }
+
+ 

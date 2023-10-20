@@ -1,0 +1,41 @@
+<app-courseheader></app-courseheader>
+<br>
+
+<body>
+    <h3 style="font-weight:bold">Course Dashboard</h3>
+    <button type="button" [hidden]="todisplay" class="btnaddloan" style="float: right;background-color: cadetblue" (click)="AddnewCourse()">Add Course</button>
+    <br>
+    <table class="content-table">
+        <thead>
+            <tr>
+                <th scope="col">CourseID</th>
+                <th scope="col">Course Name</th>
+                <th scope="col">Category</th>
+                <th scope="col">Sub Category</th>            
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody *ngIf="Courselist.data.length>0; else norecords">
+            <tr *ngFor="let x of Courselist.data">
+              <th scope="row">{{x.courseId}}</th>
+              <td>{{x.courseName}}</td>
+              <td>{{x.category}}</td>
+              <td>{{x.subCategory}}</td>
+              <td>
+                    <span [hidden]="todisplay" style="font-size: 20px;width: 100px;margin-right: 8px;">
+                        <i class="fa fa-pencil-square-o" aria-hidden="true" title="Edit" (click)="EditCourse(x.courseId)"></i> 
+                    </span>
+                    <span [hidden]="todisplayone" style="font-size: 20px;">
+                        <!-- <i class="fa fa-plus" aria-hidden="true" title="Enroll Course" (click)="StudentEnroll(x.courseId)"></i> -->
+                        <button type="button" class="btn btn-info" aria-hidden="true" title="Enroll Course" (click)="StudentEnroll(x.courseId)">Enroll</button>
+                    </span>
+              </td>
+            </tr>
+        </tbody>
+        <ng-template #norecords>
+           <h2 style="text-align: center;margin-right: -400%;"> No data available.</h2>
+          </ng-template>
+    </table>
+
+    
+</body>
